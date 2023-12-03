@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Scripturize</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/style.e308ff8e.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/scripturize.4ea6e2ca.ico" sizes="16x16">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer=""></script>
+    <script>document.getElementById('pageTitle').innerText = "Scripturize - A Hackathon Project";
+var projectName = "Scripturize";</script>
+<script src="/style.e308ff8e.js"></script></head>
+<body class="moving-gradient text-white">
+
+    <div x-data="{ mode: 'text' }">
+        <header class="bg-purple-600 p-4">
+            <h1 class="text-6xl font-bold text-center" id="projectNameHeading">Scripturize</h1>
+            <button @click="mode = (mode === 'text') ? 'speech' : 'text'" class="bg-purple-400 hover:bg-purple-500 px-2 py-1 rounded">Switch Mode</button>
+        </header>
+
+        <main class="max-w-2xl mx-auto p-8 flex-1">
+
+            <!-- Text Page -->
+            <div x-show="mode === 'text'">
+                <h2 class="text-2xl font-bold mb-4">Text Mode</h2>
+                <div class="flex items-center mb-4">
+                    <textarea class="w-full p-2 border border-purple-400 rounded" rows="5" placeholder="Type your text here"></textarea>
+                </div>
+                <button class="bg-purple-400 hover:bg-purple-500 text-white py-2 px-4 rounded">Submit</button>
+            </div>
+
+            <!-- Speech Page -->
+            <div x-show="mode === 'speech'" style="display:none;">
+                <h2 class="text-2xl font-bold mb-4">Speech Mode</h2>
+                <!-- Placeholder for speech recognition or other related content -->
+                <p>Speech recognition content goes here</p>
+            </div>
+
+        </main>
+
+        <footer class="bg-purple-600 p-4 mt-auto fixed bottom-0 w-full">
+            <p>&copy; 2023 Arjun Hariharan; Sunny Lu; Christensen Wijaya</p>
+        </footer>
+    </div>
+</body>
+</html>
